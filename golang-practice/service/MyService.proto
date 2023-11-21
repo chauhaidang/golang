@@ -1,0 +1,12 @@
+syntax = "proto3";
+package service;
+option go_package = "./service";
+service MyService {
+    rpc Get(Request) returns (Response) {}
+  }
+  message Request {
+    string name = 1;
+  }
+  message Response {
+   string id = 1;
+  }
